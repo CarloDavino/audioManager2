@@ -19,7 +19,7 @@
         <!--New Registration-->
         <scene sceneID="S5v-uR-Zvt">
             <objects>
-                <viewController id="u1e-sg-O2B" customClass="ViewController" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u1e-sg-O2B" customClass="ViewController" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhr-fd-2Xi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
         <!--Playlist-->
         <scene sceneID="vDT-Vq-8rv">
             <objects>
-                <viewController id="D62-hi-eQD" customClass="ViewControllerPlaylist" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D62-hi-eQD" customClass="ViewControllerPlaylist" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y04-sk-XkO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +129,7 @@
         <!--View Controller Selected Playlist-->
         <scene sceneID="tdr-XR-7fY">
             <objects>
-                <viewController storyboardIdentifier="selectedPlaylist" id="WD3-k2-H2I" customClass="ViewControllerSelectedPlaylist" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectedPlaylist" id="WD3-k2-H2I" customClass="ViewControllerSelectedPlaylist" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yoE-T7-hLH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,7 +187,7 @@
         <!--View Controller Tab Bar-->
         <scene sceneID="bdw-Ef-msq">
             <objects>
-                <tabBarController id="Vhv-I8-BX9" customClass="ViewControllerTabBar" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Vhv-I8-BX9" customClass="ViewControllerTabBar" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H9Z-jK-aR5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

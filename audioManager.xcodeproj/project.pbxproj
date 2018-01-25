@@ -55,13 +55,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		239F222F2019FAE90030BB85 = {
+		2316B86D2019FE6700E857F5 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				239F225E2019FC2F0030BB85 /* singleton.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		2316B86E2019FE7700E857F5 /* view controller */ = {
+			isa = PBXGroup;
+			children = (
+				239F223D2019FAE90030BB85 /* ViewControllerRecord.swift */,
+				239F22582019FBCD0030BB85 /* ViewControllerPlaylist.swift */,
+				239F225A2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift */,
+				239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */,
+			);
+			path = "view controller";
+			sourceTree = "<group>";
+		};
+		2316B86F2019FE9C00E857F5 /* database */ = {
 			isa = PBXGroup;
 			children = (
 				239F22502019FB640030BB85 /* Playlist+CoreDataClass.swift */,
 				239F22512019FB640030BB85 /* Playlist+CoreDataProperties.swift */,
 				239F22522019FB640030BB85 /* Audio+CoreDataClass.swift */,
 				239F22532019FB640030BB85 /* Audio+CoreDataProperties.swift */,
+				239F22602019FC520030BB85 /* CoreDataManager.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		2316B8702019FEC400E857F5 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				239F223F2019FAE90030BB85 /* Main.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		239F222F2019FAE90030BB85 = {
+			isa = PBXGroup;
+			children = (
+				239F223B2019FAE90030BB85 /* AppDelegate.swift */,
 				239F223A2019FAE90030BB85 /* audioManager */,
 				239F22392019FAE90030BB85 /* Products */,
 			);
@@ -78,18 +114,14 @@
 		239F223A2019FAE90030BB85 /* audioManager */ = {
 			isa = PBXGroup;
 			children = (
-				239F223B2019FAE90030BB85 /* AppDelegate.swift */,
-				239F223D2019FAE90030BB85 /* ViewControllerRecord.swift */,
-				239F223F2019FAE90030BB85 /* Main.storyboard */,
+				2316B8702019FEC400E857F5 /* storyboard */,
+				2316B86F2019FE9C00E857F5 /* database */,
+				2316B86E2019FE7700E857F5 /* view controller */,
+				2316B86D2019FE6700E857F5 /* classes */,
 				239F22452019FAE90030BB85 /* Assets.xcassets */,
 				239F22472019FAE90030BB85 /* LaunchScreen.storyboard */,
 				239F224A2019FAE90030BB85 /* Info.plist */,
 				239F22422019FAE90030BB85 /* audioManager.xcdatamodeld */,
-				239F22582019FBCD0030BB85 /* ViewControllerPlaylist.swift */,
-				239F225A2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift */,
-				239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */,
-				239F225E2019FC2F0030BB85 /* singleton.swift */,
-				239F22602019FC520030BB85 /* CoreDataManager.swift */,
 			);
 			path = audioManager;
 			sourceTree = "<group>";

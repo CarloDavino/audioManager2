@@ -20,21 +20,32 @@ class ViewControllerPlaylist: UIViewController, UITableViewDelegate, UITableView
     @IBAction func addPlaylist(_ sender: Any) {
         
         
-        let alert = UIAlertController(title: "AlertController Tutorial",
-                                      message: "Submit something",
+        let alert = UIAlertController(title: "Create new Playlist",
+                                      message: "\n\n\n\n\n\n\n",
                                       preferredStyle: .alert)
         
+        let labelError = UILabel(frame:
+            CGRect(x: 84, y: 145, width: 270, height: 20))
         
         
         // Submit button
         let submitAction = UIAlertAction(title: "Create", style: .default, handler: { (action) -> Void in
             self.textField = alert.textFields![0].text!
             print(self.textField)
+            
+            if self.textField != ""
+            {
             CoreDataManager.savePlaylist(name: self.textField)
             self.playlist = CoreDataManager.fetchObject()
             self.myTableView.reloadData()
             
-            
+            }
+            else
+            {
+                labelError.text = "*Required field"
+                labelError.isHidden = false
+                self.present(alert, animated: true, completion: nil)
+            }
         })
         
         // Cancel button
@@ -53,6 +64,7 @@ class ViewControllerPlaylist: UIViewController, UITableViewDelegate, UITableView
         // Add action buttons and present the Alert
         alert.addAction(submitAction)
         alert.addAction(cancel)
+        labelError.isHidden = true
         present(alert, animated: true, completion: nil)
         
         
