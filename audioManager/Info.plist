@@ -23,7 +23,7 @@
 			<string>com.audioManager</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>recvoice</string>
+				<string>RecVoice</string>
 			</array>
 		</dict>
 	</array>

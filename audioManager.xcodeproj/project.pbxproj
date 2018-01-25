@@ -22,6 +22,8 @@
 		239F225D2019FC150030BB85 /* ViewControllerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */; };
 		239F225F2019FC2F0030BB85 /* singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F225E2019FC2F0030BB85 /* singleton.swift */; };
 		239F22612019FC520030BB85 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22602019FC520030BB85 /* CoreDataManager.swift */; };
+		742A2F4A201A748600089940 /* DowloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A2F49201A748600089940 /* DowloadViewController.swift */; };
+		742A2F4E201A74BD00089940 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742A2F4D201A74BD00089940 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,9 @@
 		239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTabBar.swift; sourceTree = "<group>"; };
 		239F225E2019FC2F0030BB85 /* singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleton.swift; sourceTree = "<group>"; };
 		239F22602019FC520030BB85 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		742A2F49201A748600089940 /* DowloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowloadViewController.swift; sourceTree = "<group>"; };
+		742A2F4B201A74BB00089940 /* audioManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = audioManager.entitlements; sourceTree = "<group>"; };
+		742A2F4D201A74BD00089940 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742A2F4E201A74BD00089940 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +76,7 @@
 				239F22582019FBCD0030BB85 /* ViewControllerPlaylist.swift */,
 				239F225A2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift */,
 				239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */,
+				742A2F49201A748600089940 /* DowloadViewController.swift */,
 			);
 			path = "view controller";
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 				239F223B2019FAE90030BB85 /* AppDelegate.swift */,
 				239F223A2019FAE90030BB85 /* audioManager */,
 				239F22392019FAE90030BB85 /* Products */,
+				742A2F4C201A74BD00089940 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +122,7 @@
 		239F223A2019FAE90030BB85 /* audioManager */ = {
 			isa = PBXGroup;
 			children = (
+				742A2F4B201A74BB00089940 /* audioManager.entitlements */,
 				2316B8702019FEC400E857F5 /* storyboard */,
 				2316B86F2019FE9C00E857F5 /* database */,
 				2316B86E2019FE7700E857F5 /* view controller */,
@@ -124,6 +133,14 @@
 				239F22422019FAE90030BB85 /* audioManager.xcdatamodeld */,
 			);
 			path = audioManager;
+			sourceTree = "<group>";
+		};
+		742A2F4C201A74BD00089940 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				742A2F4D201A74BD00089940 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +176,14 @@
 					239F22372019FAE90030BB85 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -203,6 +228,7 @@
 				239F225B2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift in Sources */,
 				239F225F2019FC2F0030BB85 /* singleton.swift in Sources */,
 				239F22552019FB640030BB85 /* Playlist+CoreDataProperties.swift in Sources */,
+				742A2F4A201A748600089940 /* DowloadViewController.swift in Sources */,
 				239F223E2019FAE90030BB85 /* ViewControllerRecord.swift in Sources */,
 				239F22612019FC520030BB85 /* CoreDataManager.swift in Sources */,
 				239F22542019FB640030BB85 /* Playlist+CoreDataClass.swift in Sources */,
@@ -346,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = audioManager/audioManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5YU82LVM5G;
 				INFOPLIST_FILE = audioManager/Info.plist;
@@ -361,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = audioManager/audioManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5YU82LVM5G;
 				INFOPLIST_FILE = audioManager/Info.plist;

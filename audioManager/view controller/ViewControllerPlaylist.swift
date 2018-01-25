@@ -80,8 +80,6 @@ class ViewControllerPlaylist: UIViewController, UITableViewDelegate, UITableView
         myTableView.delegate = self
         myTableView.dataSource = self
         
-        
-        
     }
     
     

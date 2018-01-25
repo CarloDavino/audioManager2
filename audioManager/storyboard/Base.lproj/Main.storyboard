@@ -59,26 +59,31 @@
             </objects>
             <point key="canvasLocation" x="-1546" y="-156"/>
         </scene>
-        <!--View Controller-->
+        <!--Dowload View Controller-->
         <scene sceneID="7mW-XH-60g">
             <objects>
-                <viewController id="YOz-Hl-q1a" sceneMemberID="viewController">
+                <viewController id="YOz-Hl-q1a" customClass="DowloadViewController" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bzL-iC-T1C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Andrea è qui " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-3B-Jmv">
-                                <rect key="frame" x="69" y="156" width="236" height="67"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FCp-Eu-0J7">
+                                <rect key="frame" x="0.0" y="58" width="375" height="560"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YOz-Hl-q1a" id="D8v-Zm-69O"/>
+                                    <outlet property="delegate" destination="YOz-Hl-q1a" id="irw-D3-kla"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="J5f-1E-FBd"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="Zvl-x0-i9R"/>
+                    <connections>
+                        <outlet property="tableview" destination="FCp-Eu-0J7" id="nYu-vV-RIs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inn-Yu-v2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

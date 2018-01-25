@@ -172,6 +172,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDel
                     rotationAnimation.repeatCount = .infinity;
                     self.circle?.layer.add(rotationAnimation, forKey: "rotationAnimation")
                     
+                    
+                    //Save in CLoudKit
+                    Singleton.shared.SaveToCloud(title: self.textPlaylist)
                     //start recording
                     self.numberOfRecords += 1
                     CoreDataManager.saveObject(name: self.textField, playlist: self.textPlaylist)

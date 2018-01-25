@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 public class Singleton{
     
@@ -15,4 +16,19 @@ public class Singleton{
     var playlist = [Playlist()]
     var choicePlaylist = ""
     
-}
+    //for CLoud
+   
+    let database = CKContainer.default().privateCloudDatabase
+    
+    func SaveToCloud(title: String){
+        let newTitle = CKRecord(recordType: "Title")
+        newTitle.setValue(title, forKey: "Content")
+        
+        database.save(newTitle) { (record, error) in
+            guard record != nil else { return }
+            print("save title in database")
+        }
+    }
+    
+   
+    }
