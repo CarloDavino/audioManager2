@@ -19,7 +19,7 @@
         <!--New Registration-->
         <scene sceneID="S5v-uR-Zvt">
             <objects>
-                <viewController id="u1e-sg-O2B" customClass="ViewController" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u1e-sg-O2B" customClass="ViewController" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhr-fd-2Xi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,15 @@
                     <view key="view" contentMode="scaleToFill" id="bzL-iC-T1C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Andrea è qui " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-3B-Jmv">
+                                <rect key="frame" x="69" y="156" width="236" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="J5f-1E-FBd"/>
                     </view>
@@ -73,12 +82,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inn-Yu-v2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="174"/>
+            <point key="canvasLocation" x="429.60000000000002" y="173.16341829085459"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="vDT-Vq-8rv">
             <objects>
-                <viewController id="D62-hi-eQD" customClass="ViewControllerPlaylist" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D62-hi-eQD" customClass="ViewControllerPlaylist" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y04-sk-XkO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +138,7 @@
         <!--View Controller Selected Playlist-->
         <scene sceneID="tdr-XR-7fY">
             <objects>
-                <viewController storyboardIdentifier="selectedPlaylist" id="WD3-k2-H2I" customClass="ViewControllerSelectedPlaylist" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectedPlaylist" id="WD3-k2-H2I" customClass="ViewControllerSelectedPlaylist" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yoE-T7-hLH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,7 +196,7 @@
         <!--View Controller Tab Bar-->
         <scene sceneID="bdw-Ef-msq">
             <objects>
-                <tabBarController id="Vhv-I8-BX9" customClass="ViewControllerTabBar" customModule="microphone" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Vhv-I8-BX9" customClass="ViewControllerTabBar" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H9Z-jK-aR5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
