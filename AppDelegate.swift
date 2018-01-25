@@ -75,6 +75,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if url.scheme == "RecVoice" {
+            let identifier = url.path.replacingOccurrences(of: "/", with: "")
+            let alert = UIAlertController(title: "New Audio", message: "New audio received", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Open", style: UIAlertActionStyle.default, handler: { (action) in
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addReceived"), object: identifier, userInfo: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+        }
+        return true
+    }
+    
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
