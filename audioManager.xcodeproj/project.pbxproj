@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		239F223C2019FAE90030BB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F223B2019FAE90030BB85 /* AppDelegate.swift */; };
-		239F223E2019FAE90030BB85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F223D2019FAE90030BB85 /* ViewController.swift */; };
+		239F223E2019FAE90030BB85 /* ViewControllerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F223D2019FAE90030BB85 /* ViewControllerRecord.swift */; };
 		239F22412019FAE90030BB85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239F223F2019FAE90030BB85 /* Main.storyboard */; };
 		239F22442019FAE90030BB85 /* audioManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 239F22422019FAE90030BB85 /* audioManager.xcdatamodeld */; };
 		239F22462019FAE90030BB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239F22452019FAE90030BB85 /* Assets.xcassets */; };
 		239F22492019FAE90030BB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239F22472019FAE90030BB85 /* LaunchScreen.storyboard */; };
+		239F22542019FB640030BB85 /* Playlist+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22502019FB640030BB85 /* Playlist+CoreDataClass.swift */; };
+		239F22552019FB640030BB85 /* Playlist+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22512019FB640030BB85 /* Playlist+CoreDataProperties.swift */; };
+		239F22562019FB640030BB85 /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22522019FB640030BB85 /* Audio+CoreDataClass.swift */; };
+		239F22572019FB640030BB85 /* Audio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22532019FB640030BB85 /* Audio+CoreDataProperties.swift */; };
+		239F22592019FBCD0030BB85 /* ViewControllerPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22582019FBCD0030BB85 /* ViewControllerPlaylist.swift */; };
+		239F225B2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F225A2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift */; };
+		239F225D2019FC150030BB85 /* ViewControllerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */; };
+		239F225F2019FC2F0030BB85 /* singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F225E2019FC2F0030BB85 /* singleton.swift */; };
+		239F22612019FC520030BB85 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22602019FC520030BB85 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		239F22382019FAE90030BB85 /* audioManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audioManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239F223B2019FAE90030BB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		239F223D2019FAE90030BB85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		239F223D2019FAE90030BB85 /* ViewControllerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRecord.swift; sourceTree = "<group>"; };
 		239F22402019FAE90030BB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		239F22432019FAE90030BB85 /* audioManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = audioManager.xcdatamodel; sourceTree = "<group>"; };
 		239F22452019FAE90030BB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		239F22482019FAE90030BB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		239F224A2019FAE90030BB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		239F22502019FB640030BB85 /* Playlist+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playlist+CoreDataClass.swift"; sourceTree = "<group>"; };
+		239F22512019FB640030BB85 /* Playlist+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playlist+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		239F22522019FB640030BB85 /* Audio+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataClass.swift"; sourceTree = "<group>"; };
+		239F22532019FB640030BB85 /* Audio+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		239F22582019FBCD0030BB85 /* ViewControllerPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlaylist.swift; sourceTree = "<group>"; };
+		239F225A2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSelectedPlaylist.swift; sourceTree = "<group>"; };
+		239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTabBar.swift; sourceTree = "<group>"; };
+		239F225E2019FC2F0030BB85 /* singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleton.swift; sourceTree = "<group>"; };
+		239F22602019FC520030BB85 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,10 @@
 		239F222F2019FAE90030BB85 = {
 			isa = PBXGroup;
 			children = (
+				239F22502019FB640030BB85 /* Playlist+CoreDataClass.swift */,
+				239F22512019FB640030BB85 /* Playlist+CoreDataProperties.swift */,
+				239F22522019FB640030BB85 /* Audio+CoreDataClass.swift */,
+				239F22532019FB640030BB85 /* Audio+CoreDataProperties.swift */,
 				239F223A2019FAE90030BB85 /* audioManager */,
 				239F22392019FAE90030BB85 /* Products */,
 			);
@@ -57,12 +79,17 @@
 			isa = PBXGroup;
 			children = (
 				239F223B2019FAE90030BB85 /* AppDelegate.swift */,
-				239F223D2019FAE90030BB85 /* ViewController.swift */,
+				239F223D2019FAE90030BB85 /* ViewControllerRecord.swift */,
 				239F223F2019FAE90030BB85 /* Main.storyboard */,
 				239F22452019FAE90030BB85 /* Assets.xcassets */,
 				239F22472019FAE90030BB85 /* LaunchScreen.storyboard */,
 				239F224A2019FAE90030BB85 /* Info.plist */,
 				239F22422019FAE90030BB85 /* audioManager.xcdatamodeld */,
+				239F22582019FBCD0030BB85 /* ViewControllerPlaylist.swift */,
+				239F225A2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift */,
+				239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */,
+				239F225E2019FC2F0030BB85 /* singleton.swift */,
+				239F22602019FC520030BB85 /* CoreDataManager.swift */,
 			);
 			path = audioManager;
 			sourceTree = "<group>";
@@ -139,8 +166,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				239F223E2019FAE90030BB85 /* ViewController.swift in Sources */,
+				239F22592019FBCD0030BB85 /* ViewControllerPlaylist.swift in Sources */,
+				239F22572019FB640030BB85 /* Audio+CoreDataProperties.swift in Sources */,
+				239F225B2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift in Sources */,
+				239F225F2019FC2F0030BB85 /* singleton.swift in Sources */,
+				239F22552019FB640030BB85 /* Playlist+CoreDataProperties.swift in Sources */,
+				239F223E2019FAE90030BB85 /* ViewControllerRecord.swift in Sources */,
+				239F22612019FC520030BB85 /* CoreDataManager.swift in Sources */,
+				239F22542019FB640030BB85 /* Playlist+CoreDataClass.swift in Sources */,
 				239F223C2019FAE90030BB85 /* AppDelegate.swift in Sources */,
+				239F22562019FB640030BB85 /* Audio+CoreDataClass.swift in Sources */,
+				239F225D2019FC150030BB85 /* ViewControllerTabBar.swift in Sources */,
 				239F22442019FAE90030BB85 /* audioManager.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
