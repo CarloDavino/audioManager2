@@ -89,6 +89,66 @@
             </objects>
             <point key="canvasLocation" x="429.60000000000002" y="173.16341829085459"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="wlq-ch-yKb">
+            <objects>
+                <viewController id="FUE-RN-QI6" customClass="CollectionViewController" customModule="audioManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PA7-g3-NCr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jdQ-Hw-j4q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u2r-C3-Ovg">
+                                    <size key="itemSize" width="116" height="114"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="2hn-9W-nVh" customClass="CollectionViewCell" customModule="audioManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="114"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blv-Hz-T1I">
+                                                    <rect key="frame" x="11" y="42" width="97" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="label" destination="blv-Hz-T1I" id="aCP-H7-XcA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="FUE-RN-QI6" id="52I-KQ-MxJ"/>
+                                    <outlet property="delegate" destination="FUE-RN-QI6" id="DZi-8S-SCq"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jdQ-Hw-j4q" firstAttribute="leading" secondItem="B65-hN-vWt" secondAttribute="leading" id="F2K-gf-kbm"/>
+                            <constraint firstItem="jdQ-Hw-j4q" firstAttribute="top" secondItem="PA7-g3-NCr" secondAttribute="top" id="Nn3-yq-3G9"/>
+                            <constraint firstItem="jdQ-Hw-j4q" firstAttribute="bottom" secondItem="B65-hN-vWt" secondAttribute="bottom" id="dtK-qf-lCI"/>
+                            <constraint firstItem="jdQ-Hw-j4q" firstAttribute="trailing" secondItem="B65-hN-vWt" secondAttribute="trailing" id="qzv-38-cYq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B65-hN-vWt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="700-tN-71h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRw-px-chH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-522.39999999999998" y="-1004.3478260869566"/>
+        </scene>
         <!--Playlist-->
         <scene sceneID="vDT-Vq-8rv">
             <objects>
@@ -211,6 +271,7 @@
                         <segue destination="D62-hi-eQD" kind="relationship" relationship="viewControllers" id="HRi-jb-7nU"/>
                         <segue destination="u1e-sg-O2B" kind="relationship" relationship="viewControllers" id="mxe-sS-U5b"/>
                         <segue destination="YOz-Hl-q1a" kind="relationship" relationship="viewControllers" id="bAu-Yc-WRK"/>
+                        <segue destination="FUE-RN-QI6" kind="relationship" relationship="viewControllers" id="w4q-Ak-ByW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDb-eH-4l0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,6 +280,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle" width="16" height="16"/>
+        <image name="circle" width="709" height="720"/>
     </resources>
 </document>

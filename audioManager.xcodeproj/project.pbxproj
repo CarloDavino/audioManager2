@@ -24,6 +24,8 @@
 		239F22612019FC520030BB85 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F22602019FC520030BB85 /* CoreDataManager.swift */; };
 		742A2F4A201A748600089940 /* DowloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A2F49201A748600089940 /* DowloadViewController.swift */; };
 		742A2F4E201A74BD00089940 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742A2F4D201A74BD00089940 /* CloudKit.framework */; };
+		749D435D201C7FBB00A6512C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749D435C201C7FBB00A6512C /* CollectionViewCell.swift */; };
+		749D435F201C804E00A6512C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749D435E201C804E00A6512C /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		742A2F49201A748600089940 /* DowloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowloadViewController.swift; sourceTree = "<group>"; };
 		742A2F4B201A74BB00089940 /* audioManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = audioManager.entitlements; sourceTree = "<group>"; };
 		742A2F4D201A74BD00089940 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		749D435C201C7FBB00A6512C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		749D435E201C804E00A6512C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				239F225A2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift */,
 				239F225C2019FC150030BB85 /* ViewControllerTabBar.swift */,
 				742A2F49201A748600089940 /* DowloadViewController.swift */,
+				749D435E201C804E00A6512C /* CollectionViewController.swift */,
+				749D435C201C7FBB00A6512C /* CollectionViewCell.swift */,
 			);
 			path = "view controller";
 			sourceTree = "<group>";
@@ -227,10 +233,12 @@
 				239F22572019FB640030BB85 /* Audio+CoreDataProperties.swift in Sources */,
 				239F225B2019FBEB0030BB85 /* ViewControllerSelectedPlaylist.swift in Sources */,
 				239F225F2019FC2F0030BB85 /* singleton.swift in Sources */,
+				749D435D201C7FBB00A6512C /* CollectionViewCell.swift in Sources */,
 				239F22552019FB640030BB85 /* Playlist+CoreDataProperties.swift in Sources */,
 				742A2F4A201A748600089940 /* DowloadViewController.swift in Sources */,
 				239F223E2019FAE90030BB85 /* ViewControllerRecord.swift in Sources */,
 				239F22612019FC520030BB85 /* CoreDataManager.swift in Sources */,
+				749D435F201C804E00A6512C /* CollectionViewController.swift in Sources */,
 				239F22542019FB640030BB85 /* Playlist+CoreDataClass.swift in Sources */,
 				239F223C2019FAE90030BB85 /* AppDelegate.swift in Sources */,
 				239F22562019FB640030BB85 /* Audio+CoreDataClass.swift in Sources */,
