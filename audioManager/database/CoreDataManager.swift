@@ -17,7 +17,6 @@ class CoreDataManager: NSObject {
         return appDelegate.persistentContainer.viewContext
     }
     
-    
     //audio
     class func saveObject(name: String, playlist: String) -> Bool
     {

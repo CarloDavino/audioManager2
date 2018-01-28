@@ -11,9 +11,6 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    
-    
-    
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer!
@@ -26,6 +23,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDel
     
     var audio = [Audio()]
     var playlist:[Playlist]? = nil
+
     
     let defaults = UserDefaults.standard
     
@@ -46,12 +44,16 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDel
         }
         else
         {
+            // salvataggio sul cloud
+            Singleton.shared.SaveToCloud(title: textPlaylist, titleAudio: textField)
+            
+            
             //Stopping audio recording
             self.circle?.layer.removeAnimation(forKey: "rotationAnimation")
             circle.isHidden = true
             audioSavedLabel.isHidden = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                self.audioSavedLabel.isHidden = true
+            self.audioSavedLabel.isHidden = true
             }
             audioRecorder.stop()
             audioRecorder = nil
@@ -59,9 +61,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDel
             buttonLabel.setTitle("Start Recording", for: .normal)
             audio = CoreDataManager.fetchObject()!
             
-            
         }
-        
         
     }
     
@@ -69,7 +69,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDel
         playlist = CoreDataManager.fetchObject()
         pickerView.reloadAllComponents()
         audio = CoreDataManager.fetchObject()!
-        
         
     }
     
@@ -173,17 +172,16 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDel
                     self.circle?.layer.add(rotationAnimation, forKey: "rotationAnimation")
                     
                     
-                    //Save in CLoudKit
-                    Singleton.shared.SaveToCloud(title: self.textPlaylist)
                     //start recording
                     self.numberOfRecords += 1
                     CoreDataManager.saveObject(name: self.textField, playlist: self.textPlaylist)
-                    let fileName = self.getDirectory().appendingPathComponent(self.textField + ".m4a")
+                    let filename = self.getDirectory().appendingPathComponent(self.textField + ".m4a")
                     let settings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey: 12000, AVNumberOfChannelsKey: 1, AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue]
                     //Starting audio recording
                     do
                     {
-                        self.audioRecorder = try AVAudioRecorder(url: fileName, settings: settings)
+                        
+                        self.audioRecorder = try AVAudioRecorder(url: filename, settings: settings)
                         self.self.audioRecorder.delegate = self
                         self.audioRecorder.record()
                         self.buttonLabel.setTitle("Stop Recording", for: .normal)

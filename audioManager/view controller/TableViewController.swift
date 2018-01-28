@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import CloudKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandbleHeaderViewDelegate {
 
+     let database = CKContainer.default().privateCloudDatabase
+     var titles = [CKRecord]()
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var sections = [Section(title: "Fantacalcio",titleAudio: ["GOALLL", "Quagliarella"], expanded: false),Section(title: "Film",titleAudio: ["LOTR", "ToyStory"], expanded: false),Section(title: "Uni",titleAudio: ["Fai Cagare", "VAAAAAAA"], expanded: false)]
+    var sections = [Section(title: "Fantacalcio",titleAudio: ["GOALLL", "Quagliarella"], expanded: false),Section(title: "Film",titleAudio: ["LOTR", "ToyStory"], expanded: false),Section(title: "Uni",titleAudio: ["Fai Cagare", "VAAAAAAA"], expanded: false),Section(title: "Fantacalcio",titleAudio: ["GOALLL", "Quagliarella"], expanded: false),Section(title: "Film",titleAudio: ["LOTR", "ToyStory"], expanded: false),Section(title: "Uni",titleAudio: ["Fai Cagare", "VAAAAAAA"], expanded: false)]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        queryTitle()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +31,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+//        return sections.count
+        return titles.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].titleAudio.count
@@ -49,14 +55,23 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ExpandbleHeaderView()
-        header.customInit(title: sections[section].title, section: section, delegate: self)
+//        header.customInit(title: sections[section].title, section: section, delegate: self)
+        header.customInit(title: titles[section].value(forKey: "TitoloLista") as! String, section: section, delegate: self)
         return header
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
-        cell.textLabel?.text = sections[indexPath.section].titleAudio[indexPath.row]
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
+//        cell.textLabel?.text = sections[indexPath.section].titleAudio[indexPath.row]
+//        return cell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath)
+        let title = titles[indexPath.row].value(forKey: "TitoloLista") as! String
+        let titleaudio = titles[indexPath.row].value(forKey: "TitoloAudio") as! String
+        cell.textLabel?.text = title
+        cell.detailTextLabel?.text = titleaudio
         return cell
+        
     }
 
     func toggleSection(header: ExpandbleHeaderView, section: Int) {
@@ -68,5 +83,16 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         }
         tableView.endUpdates()
+    }
+    @objc func queryTitle(){
+        let query = CKQuery(recordType: "Messages", predicate: NSPredicate(value: true))
+        database.perform(query, inZoneWith: nil) { (records, _) in
+            guard let records = records else { return }
+            self.titles = records
+            DispatchQueue.main.async {
+                self.tableView.refreshControl?.endRefreshing()
+                self.tableView.reloadData()
+            }
+        }
     }
 }

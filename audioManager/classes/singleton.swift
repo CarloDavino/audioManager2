@@ -20,11 +20,14 @@ public class Singleton{
    
     let database = CKContainer.default().privateCloudDatabase
     
-    func SaveToCloud(title: String){
-        let newTitle = CKRecord(recordType: "Title")
-        newTitle.setValue(title, forKey: "Content")
+    func SaveToCloud(title: String, titleAudio: String){
         
-        database.save(newTitle) { (record, error) in
+        let record = CKRecord(recordType: "Messages")
+        record.setValue(title, forKey: "TitoloLista")
+        record.setValue(titleAudio, forKey: "TitoloAudio")
+       // record.setValue(url, forKey: "song")
+        
+        database.save(record) { (record, error) in
             guard record != nil else { return }
             print("save title in database")
         }

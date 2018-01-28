@@ -46,14 +46,16 @@ class DowloadViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = UITableViewCell()
-            let note = titles[indexPath.row].value(forKey: "Content") as! String
-            cell.textLabel?.text = note
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            let title = titles[indexPath.row].value(forKey: "TitoloLista") as! String
+             let titleaudio = titles[indexPath.row].value(forKey: "TitoloAudio") as! String
+            cell.textLabel?.text = title
+            cell.detailTextLabel?.text = titleaudio
             return cell
         }
     
     @objc func queryTitle(){
-        let query = CKQuery(recordType: "Title", predicate: NSPredicate(value: true))
+        let query = CKQuery(recordType: "Messages", predicate: NSPredicate(value: true))
         database.perform(query, inZoneWith: nil) { (records, _) in
             guard let records = records else { return }
             self.titles = records
@@ -62,6 +64,5 @@ class DowloadViewController: UIViewController, UITableViewDelegate, UITableViewD
                 self.tableview.reloadData()
             }
         }
-
-}
+   }
 }
