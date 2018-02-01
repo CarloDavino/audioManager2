@@ -46,7 +46,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, UIPickerViewDel
         {
             // salvataggio sul cloud
             Singleton.shared.SaveToCloud(title: textPlaylist, titleAudio: textField)
-            
+           
             
             //Stopping audio recording
             self.circle?.layer.removeAnimation(forKey: "rotationAnimation")

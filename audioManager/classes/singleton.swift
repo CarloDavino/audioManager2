@@ -72,8 +72,7 @@ public class Singleton{
     }
     
    func Ordinamento() -> [Section] {
-
-//Deve farlo prima!!!
+        //Deve farlo prima!!!
         DispatchQueue.main.async() {
             self.queryTitle()
         }
@@ -115,4 +114,22 @@ public class Singleton{
     print ("Mando: \(arraySections)")
     return arraySections
   }
+    
+//    func addValue( elem: Section){
+//        
+//        var elem = elem
+//
+//        for i in messages{
+//            if elem.title == i.textTitle{
+//                for elemaudio in elem{
+//               if elemaudio.titleAudio == i.textAudio{
+//
+//                    }
+//                }
+//            }
+//
+//        }
+//
+//    }
+    
 }

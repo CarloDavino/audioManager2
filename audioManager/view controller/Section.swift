@@ -12,11 +12,16 @@ struct Section {
     
     var title: String!
     var titleAudio: [String]!
-    var expanded: Bool!
+    var expanded: Bool?
     
     init(title: String,titleAudio: [String], expanded: Bool){
          self.title = title
          self.titleAudio = titleAudio
          self.expanded = expanded
     }
+    
+//    func start(section: Section) {
+//        section.expanded  = false
+//    }
+
 }
